@@ -1,0 +1,13 @@
+The baseline model performed reasonably well but showed clear signs of overfitting. 
+Training accuracy continued to increase steadily, while validation accuracy plateaued early and validation loss began to rise. 
+This indicates that the model was starting to memorize the training data rather than generalize to new data.
+
+The improved model incorporated multiple overfitting mitigation techniques, including L2 regularization, dropout, batch normalization, data augmentation, and early stopping. 
+These changes significantly improved generalization. Validation accuracy increased, validation loss decreased, and the gap between training and validation curves became much smaller, which can also be observed in the training/validation accuracy and loss plots.
+
+Among these techniques, data augmentation had the largest impact because it effectively increased the size and diversity of the training dataset. 
+By introducing transformations such as rotation and flipping, the model was exposed to more varied examples, improving its ability to generalize. 
+Dropout reduces co-adaptation by forcing neurons to learn more robust features. L2 regularization helped control model complexity by penalizing large weights. 
+Batch normalization stabilized training and improved convergence speed. Early stopping prevented the model from overfitting during later epochs by halting training once validation performance stopped improving.
+
+Overall, the improved model achieved higher test accuracy and demonstrated significantly better generalization compared to the baseline model.
